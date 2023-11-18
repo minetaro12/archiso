@@ -1,0 +1,8 @@
+# Alt+F1をSuper_Lに割り当てる
+xcape -e "Super_L=Alt_L|F1"
+
+# pulseaudioが起動していなければ起動する
+pgrep pulseaudio > /dev/null
+if [ $? -ne 0 ]; then
+    pulseaudio -D
+fi
