@@ -131,14 +131,11 @@ zsh
 # ビデオドライバ
 xorg-server
 xf86-video-amdgpu
+xorg-xinit
 
 # wm
 xfce4
 xfce4-goodies
-
-# lightdm
-lightdm
-lightdm-gtk-greeter
 
 # ブラウザ
 firefox
@@ -153,6 +150,7 @@ pavucontrol
 pulseaudio
 
 # その他
+alacritty
 gparted
 htop
 neofetch
