@@ -12,7 +12,7 @@
 ```
 $ sudo pacman -S archiso
 $ git clone https://github.com/minetaro12/archiso
-$ sudo mkarchiso -v -w ./archiso-tmp ./profile/archiso
+$ sudo mkarchiso -v -w ./archiso-tmp ./archiso/profile
 ```
 
 ## スクリーンショット
