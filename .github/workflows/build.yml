@@ -1,0 +1,29 @@
+name: Build ISO
+
+on:
+  schedule:
+    - cron: '0 18 1 * *'
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/minetaro12/archlinux:latest
+      options: --privileged
+    steps:
+      - name: Install archiso
+        run: pacman -Syu --noconfirm archiso
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build ISO
+        run: sudo mkarchiso -v -o ./out ./profile
+
+      - name: Upload ISO
+        uses: actions/upload-artifact@v3
+        with:
+          name: isofile
+          path: ./out/*.iso
