@@ -14,7 +14,9 @@ jobs:
       options: --privileged
     steps:
       - name: Install archiso
-        run: pacman -Syyu --noconfirm archiso
+        run: |
+          pacman -Syyu --noconfirm archiso
+          echo "VER=$(date +%Y.%m.%d)" >> $GITHUB_ENV
 
       - name: Checkout
         uses: actions/checkout@v4
@@ -23,7 +25,8 @@ jobs:
         run: mkarchiso -v -o ./out ./profile
 
       - name: Upload ISO
-        uses: actions/upload-artifact@v3
+        uses: softprops/action-gh-release@v1
         with:
-          name: isofile
-          path: ./out/*.iso
+          tag_name: ${{ env.VER }}
+          files: |
+              ./out/*.iso
