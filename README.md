@@ -12,7 +12,8 @@
 ```
 $ sudo pacman -S archiso
 $ git clone https://github.com/minetaro12/archiso
-$ sudo mkarchiso -v -w ./archiso-tmp ./archiso/profile
+$ ./archiso/apply-patches.sh
+$ sudo mkarchiso -v -w ./archiso-tmp ./archiso/relang
 ```
 
 ## スクリーンショット

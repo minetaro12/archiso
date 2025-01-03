@@ -1,0 +1,13 @@
+diff --git a/releng/pacman.conf b/releng/pacman.conf
+index e7e6497..8b73372 100644
+--- a/releng/pacman.conf
++++ b/releng/pacman.conf
+@@ -30,7 +30,7 @@ Architecture = auto
+ 
+ # Misc options
+ #UseSyslog
+-#Color
++Color
+ #NoProgressBar
+ # We cannot check disk space from within a chroot environment
+ #CheckSpace

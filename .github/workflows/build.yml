@@ -22,7 +22,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build ISO
-        run: mkarchiso -v -o ./out ./profile
+        run: |
+          ./apply-patches.sh
+          mkarchiso -v -o ./out ./profile
 
       - name: Upload ISO
         uses: softprops/action-gh-release@v1

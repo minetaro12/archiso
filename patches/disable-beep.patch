@@ -1,0 +1,26 @@
+diff --git a/releng/airootfs/etc/modprobe.d/nobeep.conf b/releng/airootfs/etc/modprobe.d/nobeep.conf
+new file mode 100644
+index 0000000..b46792e
+--- /dev/null
++++ b/releng/airootfs/etc/modprobe.d/nobeep.conf
+@@ -0,0 +1 @@
++blacklist pcspkr
+diff --git a/releng/efiboot/loader/loader.conf b/releng/efiboot/loader/loader.conf
+index 2d137aa..982641e 100644
+--- a/releng/efiboot/loader/loader.conf
++++ b/releng/efiboot/loader/loader.conf
+@@ -1,3 +1,3 @@
+ timeout 15
+ default 01-archiso-x86_64-linux.conf
+-beep on
++beep off
+diff --git a/releng/grub/grub.cfg b/releng/grub/grub.cfg
+index 25194a3..8c69eb7 100644
+--- a/releng/grub/grub.cfg
++++ b/releng/grub/grub.cfg
+@@ -103,5 +103,3 @@ menuentry 'System restart' --class reboot --class restart {
+ }
+ 
+ 
+-# GRUB init tune for accessibility
+-play 600 988 1 1319 4

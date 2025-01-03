@@ -1,0 +1,31 @@
+diff --git a/releng/airootfs/etc/locale.gen b/releng/airootfs/etc/locale.gen
+new file mode 100644
+index 0000000..9134f92
+--- /dev/null
++++ b/releng/airootfs/etc/locale.gen
+@@ -0,0 +1,2 @@
++en_US.UTF-8 UTF-8
++ja_JP.UTF-8 UTF-8
+diff --git a/releng/airootfs/etc/systemd/system/locale-gen.service b/releng/airootfs/etc/systemd/system/locale-gen.service
+new file mode 100644
+index 0000000..7966c5d
+--- /dev/null
++++ b/releng/airootfs/etc/systemd/system/locale-gen.service
+@@ -0,0 +1,9 @@
++[Unit]
++Description=locale-gen
++
++[Service]
++Type=oneshot
++ExecStart=/usr/bin/locale-gen
++
++[Install]
++WantedBy=multi-user.target
+diff --git a/releng/airootfs/etc/systemd/system/multi-user.target.wants/locale-gen.service b/releng/airootfs/etc/systemd/system/multi-user.target.wants/locale-gen.service
+new file mode 120000
+index 0000000..a35477d
+--- /dev/null
++++ b/releng/airootfs/etc/systemd/system/multi-user.target.wants/locale-gen.service
+@@ -0,0 +1 @@
++../locale-gen.service
+\ No newline at end of file

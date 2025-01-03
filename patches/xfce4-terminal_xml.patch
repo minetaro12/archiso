@@ -1,0 +1,11 @@
+diff --git a/releng/airootfs/root/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-terminal.xml b/releng/airootfs/root/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-terminal.xml
+new file mode 100644
+index 0000000..4bfce89
+--- /dev/null
++++ b/releng/airootfs/root/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-terminal.xml
+@@ -0,0 +1,5 @@
++<?xml version="1.0" encoding="UTF-8"?>
++
++<channel name="xfce4-terminal" version="1.0">
++  <property name="font-name" type="string" value="Source Code Pro 12"/>
++</channel>
