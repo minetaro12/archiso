@@ -1,9 +1,0 @@
-[Unit]
-Description=locale-gen
-
-[Service]
-Type=oneshot
-ExecStart=/usr/bin/locale-gen
-
-[Install]
-WantedBy=multi-user.target
