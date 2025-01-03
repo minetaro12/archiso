@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Install archiso
         run: |
-          pacman -Syyu --noconfirm archiso
+          pacman -Syyu --noconfirm archiso git
           echo "VER=$(date +%Y.%m.%d)" >> $GITHUB_ENV
 
       - name: Checkout
